@@ -131,10 +131,8 @@ public class SetupPanel extends JPanel implements Observer {
 	        }
 		} else {
 			File dir = new File(url.getFile());
-			String paths[] = (url.toString().split("/"));
-			for (int i = paths.length-1 ; !paths[i].equals("bin");i--) {
-				classpath = (paths[i]) + "." + classpath;
-			}
+			classpath = url.toString().replaceFirst("^.*/production/RushHourCS310/", "");
+			classpath = classpath.replaceAll("/", ".");
 			for(String file : dir.list()) {
 				Class<?> theClass;
 				try {
@@ -147,6 +145,7 @@ public class SetupPanel extends JPanel implements Observer {
 						}
 					}
 				} catch (Throwable e) {
+//					e.printStackTrace();
 				} 
 			}
 		}

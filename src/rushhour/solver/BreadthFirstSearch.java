@@ -10,6 +10,7 @@ public class BreadthFirstSearch extends AbstractSolver {
 	@Override
 	public Stack<Move> solve(State state) {
 		start = System.currentTimeMillis();
+
 		return fail();
 	}
 	

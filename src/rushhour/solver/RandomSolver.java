@@ -19,7 +19,6 @@ public class RandomSolver extends AbstractSolver {
 		List<State> children = state.getChildren();
 		
 		State current = children.get(rng.nextInt(children.size()));
-		nodeCount++;
 		
 		while(!current.isGoal()) {
 			nodeCount++;
