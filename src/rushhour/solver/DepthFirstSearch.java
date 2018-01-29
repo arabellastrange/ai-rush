@@ -11,31 +11,34 @@ public class DepthFirstSearch extends AbstractSolver {
 
 	@Override
 	public Stack<Move> solve(State state) {
-	    Stack stack = new Stack();
-
 		start = System.currentTimeMillis();
 
+        Stack<State> stack = new Stack<State>();
 		List<State> children = state.getChildren();
-		//List<State> visited = new ArrayList<State>() ;
-
-        State current = children.get(0);
+		List<State> visited = new ArrayList<State>();
+        State current = state;
         stack.push(current);
-        //visited.add(current);
+        nodeCount++;
 
-
-		while(!current.isGoal() && !stack.isEmpty()) {
-			nodeCount++;
-			children = current.getChildren();
-			if(children.size() != 0){
-                State next = children.get(1);
-                current = next;
-                stack.push(current);
-                //visited.add(current);
+		while(!stack.isEmpty()) {
+		    current = stack.pop();
+		    visited.add(current);
+		    System.out.println(current.toString());
+		    nodeCount++;
+            if(current.isGoal()){
+                return calculateMoves(state, current);
             }
-
+            children = current.getChildren(); //check for unvisited children, push to stack
+            if(children.size() != 0){
+                for(int i = 0; i  < children.size(); i++){
+                    if(visited.contains(children.get(i))){
+                        stack.push(children.get(i));
+                    }
+                }
+            }
 		}
 
-		return calculateMoves(state, current);
+		return fail();
 	}
 	
 }
