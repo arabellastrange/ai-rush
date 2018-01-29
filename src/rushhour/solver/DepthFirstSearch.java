@@ -18,12 +18,14 @@ public class DepthFirstSearch extends AbstractSolver {
 		List<State> visited = new ArrayList<State>();
         State current = state;
         stack.push(current);
+
+        //System.out.println("Parent: " + current.toString());
         nodeCount++;
 
 		while(!stack.isEmpty()) {
 		    current = stack.pop();
 		    visited.add(current);
-		    System.out.println(current.toString());
+		    //System.out.println("Current: " + current.toString());
 		    nodeCount++;
             if(current.isGoal()){
                 return calculateMoves(state, current);
@@ -31,13 +33,12 @@ public class DepthFirstSearch extends AbstractSolver {
             children = current.getChildren(); //check for unvisited children, push to stack
             if(children.size() != 0){
                 for(int i = 0; i  < children.size(); i++){
-                    if(visited.contains(children.get(i))){
+                    if(!visited.contains(children.get(i))){
                         stack.push(children.get(i));
                     }
                 }
             }
 		}
-
 		return fail();
 	}
 	

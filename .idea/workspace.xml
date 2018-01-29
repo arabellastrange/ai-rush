@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8082bc5f-ef55-4e44-adfc-2fb722a0dbe2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/RushHourCS310/rushhour/solver/BreadthFirstSearch.class" afterPath="$PROJECT_DIR$/out/production/RushHourCS310/rushhour/solver/BreadthFirstSearch.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/RushHourCS310/rushhour/solver/DepthFirstSearch.class" afterPath="$PROJECT_DIR$/out/production/RushHourCS310/rushhour/solver/DepthFirstSearch.class" />
+      <change beforePath="$PROJECT_DIR$/src/rushhour/solver/BreadthFirstSearch.java" afterPath="$PROJECT_DIR$/src/rushhour/solver/BreadthFirstSearch.java" />
       <change beforePath="$PROJECT_DIR$/src/rushhour/solver/DepthFirstSearch.java" afterPath="$PROJECT_DIR$/src/rushhour/solver/DepthFirstSearch.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -37,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DepthFirstSearch.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DepthFirstSearch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rushhour/solver/DepthFirstSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+            <state relative-caret-position="204">
+              <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#356#363#0" expanded="true" />
@@ -51,17 +54,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BreadthFirstSearch.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BreadthFirstSearch.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/rushhour/solver/BreadthFirstSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1">
-              <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-              <folding />
+            <state relative-caret-position="85">
+              <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#308#315#0" expanded="true" />
+                <element signature="e#402#409#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>40232097</find>
+      <find>aa3ef3e9</find>
+      <find>5cc0a497</find>
+      <find>ce63b877</find>
+      <find>@29e111d5</find>
+      <find>@ed36d645</find>
+      <find>@b5352445</find>
+      <find>9a64a5a9</find>
+      <find>b1d131d5</find>
+      <find>eae49757</find>
+      <find>ea4949d7</find>
+      <find>cbd0b079</find>
+      <find>7c01c9d7</find>
+      <find>7cec796b</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -76,8 +101,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/rushhour/view/SetupPanel.java" />
         <option value="$PROJECT_DIR$/src/rushhour/solver/RandomSolver.java" />
-        <option value="$PROJECT_DIR$/src/rushhour/solver/BreadthFirstSearch.java" />
         <option value="$PROJECT_DIR$/src/rushhour/solver/DepthFirstSearch.java" />
+        <option value="$PROJECT_DIR$/src/rushhour/solver/BreadthFirstSearch.java" />
       </list>
     </option>
   </component>
@@ -342,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517239657186</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="depthfirst">
+      <created>1517244326067</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1517244326067</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -350,7 +382,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -360,7 +391,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35905513" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -390,11 +421,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="started depthfirst" />
-    <option name="LAST_COMMIT_MESSAGE" value="started depthfirst" />
+    <MESSAGE value="depthfirst" />
+    <option name="LAST_COMMIT_MESSAGE" value="depthfirst" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -437,7 +469,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="24" selection-end-column="46" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#308#315#0" expanded="true" />
+            <element signature="e#402#409#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -491,7 +527,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="24" selection-end-column="46" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#308#315#0" expanded="true" />
+            <element signature="e#402#409#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -549,7 +589,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#308#315#0" expanded="true" />
+            <element signature="e#402#409#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -585,26 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rushhour/model/state/SixLongs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="259" column="0" lean-forward="false" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
-          <folding>
-            <element signature="e#5712#5719#0" expanded="true" />
-            <element signature="e#8235#8236#0" expanded="true" />
-            <element signature="e#8278#8279#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rushhour/solver/BreadthFirstSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/rushhour/solver/RandomSolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -615,14 +639,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/rushhour/model/state/SixLongs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="568" column="0" lean-forward="false" selection-start-line="568" selection-start-column="0" selection-end-line="568" selection-end-column="0" />
+          <folding>
+            <element signature="e#5712#5719#0" expanded="true" />
+            <element signature="e#8235#8236#0" expanded="true" />
+            <element signature="e#8278#8279#0" expanded="true" />
+            <element signature="e#12692#12693#0" expanded="true" />
+            <element signature="e#12728#12729#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/rushhour/solver/DepthFirstSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+        <state relative-caret-position="204">
+          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#356#363#0" expanded="true" />
             <element signature="e#450#457#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rushhour/solver/BreadthFirstSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#308#315#0" expanded="true" />
+            <element signature="e#402#409#0" expanded="true" />
           </folding>
         </state>
       </provider>
