@@ -1,7 +1,6 @@
 package rushhour.solver;
 
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 import rushhour.model.move.Move;
 import rushhour.model.state.State;
@@ -11,18 +10,36 @@ public class BreadthFirstSearch extends AbstractSolver {
 	@Override
 	public Stack<Move> solve(State state) {
 		start = System.currentTimeMillis();
-		List<State> children = state.getChildren();
 
-		State current = children.get(0);
+        Queue<State> queue = new LinkedList<State>();
+		List<State> children = state.getChildren(); // placeholder value
+		List<State> visited = new ArrayList<State>();
+		State current = state;
+		queue.add(current);
 
-        while(!current.isGoal()) {
+		nodeCount++;
+
+        while(!queue.isEmpty()) {
+            current = queue.remove();
+            visited.add(current);
+
             nodeCount++;
+
+            if(current.isGoal()){
+                return calculateMoves(state, current);
+            }
+
             children = current.getChildren();
-            State next = children.get(1);
-            current = next;
+            if(children.size() != 0){
+                for(int i = 0; i  < children.size(); i++){
+                    if(!visited.contains(children.get(i)) && !queue.contains(children.get(i))){
+                        queue.add(children.get(i));
+                    }
+                }
+            }
         }
 
-        return calculateMoves(state, current);
+        return fail();
 	}
 	
 }
