@@ -14,7 +14,7 @@ public class DepthFirstSearch extends AbstractSolver {
 		start = System.currentTimeMillis();
 
         Stack<State> stack = new Stack<State>();
-		List<State> children = state.getChildren();
+		List<State> children;
 		List<State> visited = new ArrayList<State>();
         State current = state;
         stack.push(current);

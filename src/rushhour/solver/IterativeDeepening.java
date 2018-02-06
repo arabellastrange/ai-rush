@@ -22,21 +22,19 @@ public class IterativeDeepening extends AbstractSolver {
 
         stack = new Stack<State>();
         goalFound = state.isGoal();
-        maxDepth = 0;
+        maxDepth = 1;
 
         State current = state;
         stack.push(current);
-
         nodeCount++;
 
-        while(!goalFound){
+        while (!goalFound) {
             System.out.println("Goal not yet found");
             System.out.println("Current max depth pre loop " + maxDepth);
-            if(maxDepth < 500){
+            if (maxDepth < 500) { //maximum depth before we give up
                 depthLimitedSearch(current);
                 maxDepth++;
-            }
-            else{
+            } else {
                 return fail();
             }
         }
@@ -45,37 +43,55 @@ public class IterativeDeepening extends AbstractSolver {
         return calculateMoves(state, goal);
     }
 
-    public void depthLimitedSearch(State c){
+    public void depthLimitedSearch(State c) {
         visited = new ArrayList<State>();
         depth = 0;
 
-        while(!stack.isEmpty()) {
+        while (!stack.isEmpty()) {
             c = stack.pop();
             visited.add(c);
             nodeCount++;
-            System.out.println("initial depth: " + depth);
-            System.out.println("Current max depth in loop " + maxDepth);
+            //System.out.println("initial depth: " + depth);
+            //System.out.println("Current max depth in loop " + maxDepth);
 
-            if(c.isGoal()){
+            if (c.isGoal()) {
                 goalFound = true;
                 goal = c;
                 return;
             }
-            else if(depth <= maxDepth){
+
+            if(depth < maxDepth){
                 children = c.getChildren(); //check for unvisited children, push to stack
                 if(children.size() != 0){
                     depth++;
-                    System.out.println("Current depth: " + depth);
                     for(int i = 0; i  < children.size(); i++){
-                        if(!visited.contains(children.get(i)) && !stack.contains(children.get(i))){
+                        if(!visited.contains(children.get(i))){
                             stack.push(children.get(i));
                         }
                     }
                 }
             }
             else{
+                for(int i = 0; i < stack.size(); i++){
+                    if(!visited.contains(stack.peek())){
+                        children = stack.peek().getChildren();
+                        if(children.size() != 0){
+                            System.out.println("Current depth: " + depth);
+                            for(int n = 0; n < children.size(); n++){
+                                nodeCount++;
+                                if(children.get(n).isGoal()){
+                                    goalFound = true;
+                                    goal = children.get(n);
+                                    return;
+                                }
+                            }
+                        }
+                    }
+                }
+
                 return;
             }
+
         }
     }
 }

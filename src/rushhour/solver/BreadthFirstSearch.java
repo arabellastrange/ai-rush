@@ -12,7 +12,7 @@ public class BreadthFirstSearch extends AbstractSolver {
 		start = System.currentTimeMillis();
 
         Queue<State> queue = new LinkedList<State>();
-		List<State> children = state.getChildren(); // placeholder value
+		List<State> children;
 		List<State> visited = new ArrayList<State>();
 		State current = state;
 		queue.add(current);
