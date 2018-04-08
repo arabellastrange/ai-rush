@@ -33,7 +33,7 @@ public class DepthFirstSearch extends AbstractSolver {
             children = current.getChildren(); //check for unvisited children, push to stack
             if(children.size() != 0){
                 for(int i = 0; i  < children.size(); i++){
-                    if(!visited.contains(children.get(i))){
+                    if(!visited.contains(children.get(i)) && !stack.contains(children.get(i))){
                         stack.push(children.get(i));
                     }
                 }

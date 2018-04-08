@@ -12,8 +12,8 @@ public class BreadthFirstSearch extends AbstractSolver {
 		start = System.currentTimeMillis();
 
         Queue<State> queue = new LinkedList<State>();
-		List<State> children = state.getChildren(); // placeholder value
-		List<State> visited = new ArrayList<State>();
+		List<State> children;
+		HashSet<State> visited = new HashSet<>();
 		State current = state;
 		queue.add(current);
 
@@ -31,9 +31,9 @@ public class BreadthFirstSearch extends AbstractSolver {
 
             children = current.getChildren();
             if(children.size() != 0){
-                for(int i = 0; i  < children.size(); i++){
-                    if(!visited.contains(children.get(i)) && !queue.contains(children.get(i))){
-                        queue.add(children.get(i));
+                for(State child : children){
+                    if(!visited.contains(child) && !queue.contains(child)){
+                        queue.add(child);
                     }
                 }
             }
