@@ -3,6 +3,7 @@ package rushhour.solver;
 import rushhour.model.move.Move;
 import rushhour.model.state.State;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Stack;
@@ -29,7 +30,7 @@ public class IterativeDeepening extends AbstractSolver {
         stack.push(current);
         nodeCount++;
 
-        while(!goalFound){
+        while (!goalFound) {
             System.out.println("Goal not yet found");
             System.out.println("Current max depth pre loop " +  maxDepth);
             if(maxDepth < 10){
@@ -46,9 +47,9 @@ public class IterativeDeepening extends AbstractSolver {
     }
 
     public void depthfirstsearch(StateDepth c){
+        visited = new HashSet<>();
         depth = 0;
         System.out.println("Initial depth: " + depth);
-
         while(depth <= maxDepth){ //need to change this condition
             System.out.println("Current max depth in loop " + maxDepth);
             System.out.println("Current depth " + depth);
@@ -98,6 +99,7 @@ public class IterativeDeepening extends AbstractSolver {
             else {
                 return false;
             }
+
         }
 
         @Override
